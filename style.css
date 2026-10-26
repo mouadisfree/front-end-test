@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1f26;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #2b2d37;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  min-height: 100px;
+  padding: 12px 8px;
+  margin-bottom: 16px;
+  text-align: right;
+  color: #fff;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous {
+  min-height: 22px;
+  font-size: 18px;
+  color: #8a8d9b;
+}
+
+.current {
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.key {
+  height: 64px;
+  border: none;
+  border-radius: 14px;
+  background: #3a3d4a;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.key:hover {
+  background: #474b5a;
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+.key.fn {
+  background: #555a6b;
+}
+
+.key.op {
+  background: #ff9f0a;
+}
+
+.key.op:hover {
+  background: #ffb23f;
+}
+
+.key.equals {
+  grid-column: span 2;
+  background: #30c06a;
+}
+
+.key.equals:hover {
+  background: #45d17e;
+}
